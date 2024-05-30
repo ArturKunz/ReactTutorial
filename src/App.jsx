@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   function increaseCount() {
-    setCount(count + 1);
+    setCount(count + 2);
   }
 
   return (
