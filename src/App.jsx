@@ -22,7 +22,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={increaseCount}>count is {count}</button>
+        <button onClick={increaseCount}>The count is {count}</button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
