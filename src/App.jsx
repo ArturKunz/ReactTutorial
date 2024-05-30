@@ -6,8 +6,10 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
+  const increaseAmount = 2;
+
   function increaseCount() {
-    setCount(count + 2);
+    setCount(count + increaseAmount);
   }
 
   return (
