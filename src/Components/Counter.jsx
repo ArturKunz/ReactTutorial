@@ -1,19 +1,24 @@
 import { useState } from "react";
 import CountButton from "./CountButton";
 
-function Counter() {
+function Counter({ increaseAmounts }) {
   const [count, setCount] = useState(0);
-
   function handleCount(increaseAmount) {
     setCount(count + increaseAmount);
   }
+  console.log(increaseAmounts);
   return (
     <>
       <p>The count is {count}</p>
-      <CountButton onClick={handleCount} increaseAmount={1} />
-      <CountButton onClick={handleCount} increaseAmount={2} />
-      <CountButton onClick={handleCount} increaseAmount={5} />
-      <CountButton onClick={handleCount} increaseAmount={10} />
+      {increaseAmounts.map((increaseAmount, index) => {
+        return (
+          <CountButton
+            key={index}
+            onClick={handleCount}
+            increaseAmount={increaseAmount}
+          />
+        );
+      })}
     </>
   );
 }

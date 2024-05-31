@@ -16,7 +16,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <Counter />
+        <Counter increaseAmounts={[1, 2, 5, 10]} />
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
