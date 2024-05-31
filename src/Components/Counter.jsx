@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CountButton from "./CountButton";
 
-function Counter({ increaseAmounts }) {
+function Counter({ increaseAmounts, maxCount = 100 }) {
   const [count, setCount] = useState(0);
   const countText = `The visitor count is ${count}`;
 
@@ -9,12 +9,12 @@ function Counter({ increaseAmounts }) {
     setCount(count + increaseAmount);
   }
 
-  if (count >= 100) return <p>{countText}</p>;
+  if (count >= maxCount) return <p>{countText}</p>;
 
   return (
     <>
       <p>{countText}</p>
-      {<p>Achtung über 80% voll!</p> && count === 80}
+      {count >= maxCount * 0.8 && <p>Achtung über 80% voll!</p>}
       {increaseAmounts.map((increaseAmount, index) => {
         return (
           <CountButton
