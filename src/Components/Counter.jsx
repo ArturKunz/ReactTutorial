@@ -6,7 +6,6 @@ function Counter({ increaseAmounts }) {
   function handleCount(increaseAmount) {
     setCount(count + increaseAmount);
   }
-  console.log(increaseAmounts);
   return (
     <>
       <p>The count is {count}</p>
