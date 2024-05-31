@@ -6,6 +6,11 @@ import { useState } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
+
+  function handleCount(increaseAmount) {
+    setCount(count + increaseAmount);
+  }
+
   return (
     <>
       <div>
@@ -19,10 +24,10 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
         <p>The count is {count}</p>
-        <CountButton count={count} setCount={setCount} increaseAmount={1} />
-        <CountButton count={count} setCount={setCount} increaseAmount={2} />
-        <CountButton count={count} setCount={setCount} increaseAmount={5} />
-        <CountButton count={count} setCount={setCount} increaseAmount={10} />
+        <CountButton onClick={handleCount} increaseAmount={1} />
+        <CountButton onClick={handleCount} increaseAmount={2} />
+        <CountButton onClick={handleCount} increaseAmount={5} />
+        <CountButton onClick={handleCount} increaseAmount={10} />
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
