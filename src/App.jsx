@@ -1,8 +1,9 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Counter from "./Components/Counter";
+// import Counter from "./Components/Counter";
 import WarningText from "./Components/WarningText";
+import CounterClass from "./Components/Counter_Class";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <Counter increaseAmounts={[1, 2, 5, 10]} maxCount={30} />
+        <CounterClass increaseAmounts={[1, 2, 5, 10]} maxCount={30} />
         <WarningText>
           Edit <code>src/App.jsx</code> and save to test HMR
         </WarningText>
