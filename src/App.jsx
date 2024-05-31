@@ -1,16 +1,9 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import CountButton from "./Components/CountButton";
-import { useState } from "react";
+import Counter from "./Components/Counter";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  function handleCount(increaseAmount) {
-    setCount(count + increaseAmount);
-  }
-
   return (
     <>
       <div>
@@ -23,11 +16,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <p>The count is {count}</p>
-        <CountButton onClick={handleCount} increaseAmount={1} />
-        <CountButton onClick={handleCount} increaseAmount={2} />
-        <CountButton onClick={handleCount} increaseAmount={5} />
-        <CountButton onClick={handleCount} increaseAmount={10} />
+        <Counter />
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
