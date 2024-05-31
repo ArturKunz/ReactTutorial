@@ -3,12 +3,18 @@ import CountButton from "./CountButton";
 
 function Counter({ increaseAmounts }) {
   const [count, setCount] = useState(0);
+  const countText = `The visitor count is ${count}`;
+
   function handleCount(increaseAmount) {
     setCount(count + increaseAmount);
   }
+
+  if (count >= 100) return <p>{countText}</p>;
+
   return (
     <>
-      <p>The count is {count}</p>
+      <p>{countText}</p>
+      {<p>Achtung über 80% voll!</p> && count === 80}
       {increaseAmounts.map((increaseAmount, index) => {
         return (
           <CountButton
