@@ -3,7 +3,7 @@ function CountButton({ count, setCount, increaseAmount }) {
     setCount(count + increaseAmount);
   }
 
-  return <button onClick={increaseCount}>The count is {count}</button>;
+  return <button onClick={increaseCount}>Increase by {increaseAmount}</button>;
 }
 
 export default CountButton;

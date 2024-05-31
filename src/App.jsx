@@ -18,6 +18,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
+        <p>The count is {count}</p>
         <CountButton count={count} setCount={setCount} increaseAmount={1} />
         <CountButton count={count} setCount={setCount} increaseAmount={2} />
         <CountButton count={count} setCount={setCount} increaseAmount={5} />
