@@ -1,10 +1,4 @@
-import { useState } from "react";
-
-function CountButton() {
-  const [count, setCount] = useState(0);
-
-  const increaseAmount = 2;
-
+function CountButton({ count, setCount, increaseAmount }) {
   function increaseCount() {
     setCount(count + increaseAmount);
   }

@@ -2,8 +2,10 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import CountButton from "./Components/CountButton";
+import { useState } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
   return (
     <>
       <div>
@@ -16,7 +18,10 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <CountButton />
+        <CountButton count={count} setCount={setCount} increaseAmount={1} />
+        <CountButton count={count} setCount={setCount} increaseAmount={2} />
+        <CountButton count={count} setCount={setCount} increaseAmount={5} />
+        <CountButton count={count} setCount={setCount} increaseAmount={10} />
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
