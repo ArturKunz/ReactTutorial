@@ -1,11 +1,11 @@
 import "./App.css";
-import UsernameInput from "./Components/UsernameInput";
+import FavoriteIceCreamForm from "./Components/FavoriteIceCream";
 // import Counter from "./Components/Counter";
 
 function App() {
   return (
     <>
-      <UsernameInput />
+      <FavoriteIceCreamForm />
     </>
   );
 }
